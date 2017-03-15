@@ -1,3 +1,5 @@
+var x = document.getElementById("carmake").value;
+var y = document.getElementById("carmodel").value;
 var locations = [
     [
         "McPherson Library",
@@ -14,6 +16,11 @@ var locations = [
         48.465173,
          -123.308397
     ],
+    [
+        "Custom",
+        x,
+        y
+    ]
 ]
 
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -28,7 +35,7 @@ var locations = [
 
     for (i = 0; i < locations.length; i++) {  
       marker = new google.maps.Marker({
-        position: new google.maps.LatLng(locations[i][1], locations[i][2], locations[i][3]),
+        position: new google.maps.LatLng(locations[i][1], locations[i][2], locations[i][3], locations[i][4]), 
         map: map
       });
 
@@ -149,3 +156,4 @@ function deleteCar(id) {
 }
 
 outputCars();
+
