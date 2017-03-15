@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html>
 
-<div>
-    <div id="map" style="width: 500px; height: 400px;"></div>
-    <script src="https://maps.google.com/maps/api/js?key=AIzaSyCZgpL9-XKLxJFbKc0ig4TVtHdxGlMtTvw"></script>
-</div>
-
 <script type="text/javascript" src="hm9.js"></script>
    
 </html>
@@ -14,13 +9,14 @@
 
 <div id="controls">
     <p>Add a location to the database</p>
-    <label>Latitude: </label><input type="text" id="carmake" /><br />
-    <label>Longtitude: </label><input type="text" id="carmodel" /><br />
-    <button type="button" id="addcar" onclick="addCar();">Add Location</button>
+    <label>Name: </label><input type="text" id="name" /><br />
+    <label>Latitude: </label><input type="text" id="lat" /><br />
+    <label>Longtitude: </label><input type="text" id="long" /><br />
+    <button type="button" id="addlocation" onclick="addlocation();">Add Location</button>
 </div>
-<div id="carlistholder">
+<div id="locationlist">
     <h3>Your Locations</h3>
-    <ul id="carlist">
+    <ul id="location">
     </ul>
 </div>
 
